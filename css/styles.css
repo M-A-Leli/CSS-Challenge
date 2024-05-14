@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 18px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+#hero {
+    height: 120vh;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+#hero .main, #hero .hero-highlights {
+    grid-column: 1/1;
+}
+
+#hero .main {
+    grid-row: 1/8;
+    background: url(../images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .header {
+    color: white;
+    flex: 1;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+#hero .navigation, #hero .logo, #hero .sign-in {
+    height: 100%;
+}
+
+#hero .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+#hero .navigation a {
+    height: 80%;
+    min-width: 100px;
+    padding: 0 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+#hero .sign-in button {
+    height: 80%;
+    text-transform: capitalize;
+    color: white;
+    min-width: 100px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0080ff;
+}
+
+#hero .sign-in button:nth-child(1) {
+    background: transparent;
+}
+
+#hero .sign-in button:nth-child(1):hover, #hero .navigation a:hover {
+    cursor: pointer;
+    background-color: #0080ff;
+}
+
+#hero .tag {
+    flex: 7;
+    width: 80vw;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#hero .tagline {
+    width: 60%;
+    font-size: 36px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#hero .subheadline {
+    width: 50%;
+    text-align: center;
+}
+
+#hero .hero-cta button {
+    min-width: 150px;
+    padding: 10px;
+    text-transform: capitalize;
+    color: white;
+    border: 2px solid white;
+    border-radius: 24px;
+    background: transparent;
+}
+
+#hero .hero-cta button:hover {
+    cursor: pointer;
+    border: none;
+    background-color: #0080ff;
+}
+
+#hero .hero-highlights {
+    grid-row: 7/-1;
+    justify-self: center;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 30px; */
+}
+
+#hero .hero-highlights .highlight {
+    background-color: white;
+    max-width: 25%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 6px 6px rgba(85, 85, 85, 0.1);
+}
+
+#hero .hero-highlights .highlight ion-icon {
+    color: #0080ff;
+    font-size: 48px;
+}
+
+#hero .hero-highlights .highlight h3 {
+    text-transform: capitalize;
+}
+
+#hero .hero-highlights .highlight p {
+    color: #555555;
+}
+
+#hero .hero-highlights .highlight:nth-child(3) {
+    color: white;
+    background-color: #0080ff;
+}
+
+#hero .hero-highlights .highlight:nth-child(3) ion-icon {
+    color: white;
+}
+
+#hero .hero-highlights .highlight:nth-child(3) p {
+    color: white;
+}
+
+/* #hero .hero-highlights .highlight:hover {
+    color: white;
+    background-color: #0080ff;
+} */
+
+#features {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#features .container {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+#features .feature {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature ion-icon {
+    font-size: 48px;
+    color: #0080ff;
+}
+
+#features .feature h4 {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+#features .feature p {
+    color: #555555;
+}
+
+#industry, #pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#industry {
+    height: 100vh;
+}
+
+#industry .heading, #pricing .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#industry .heading h1, #pricing .heading h1 {
+    text-transform: capitalize;
+    font-size: 36px;
+}
+
+#industry .heading p, #pricing .heading p {
+    color: #555555;
+}
+
+.testimonials {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.testimonial-card {
+    border: 1px solid #555555;
+    padding: 10px;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    text-align: center;
+}
+
+.testimonial-card .img {
+    width: 100%;
+    height: 100%;
+    flex: 4;
+}
+
+.testimonial-card .img img {
+    width: 50%;
+    height: auto;
+}
+
+.testimonial-card .testimonial {
+    color: #555555;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    flex: 3;
+}
+
+.testimonial-card .rating {
+    width: 100%;
+    height: 100%;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#partners, #newsletter-signup {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#partners .container , #newsletter-signup .container {
+    width: 80%;
+    height: 80%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#partners .container img {
+    height: 100%;
+    width: auto;
+}
+
+#newsletter-signup .container {
+    background: linear-gradient(to right, blue, magenta);
+    justify-content: space-between;
+    gap: 10%;
+}
+
+#newsletter-signup .container h3 {
+    flex: 1;
+    color: white;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+#newsletter-signup .container form {
+    flex: 2;
+    height: 80%;
+    padding: 2px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+#newsletter-signup .container form input {
+    border: 1px solid red;
+    flex: 2;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#newsletter-signup .container form button {
+    flex: 1;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: #0080ff;
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+#pricing {
+    height: 140vh;
+}
+
+#pricing  .heading {
+    flex: 1;
+}
+
+.pricing-cards {
+    flex: 6;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-card {
+    border: 1px solid #0080ff;
+    height: 80%;
+    width: 20%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    /* transition: height 0.3s ease; */
+}
+
+.pricing-card:nth-child(2) {
+    height: 90%;
+    background-color: #001933;
+    color: white;
+}
+
+/* .pricing-card:hover {
+    background-color: #001933;
+    color: white;
+    height: 90%;
+} */
+
+.pricing-card .name {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.pricing-card .description {
+    color: #555555;
+    text-align: center;
+}
+
+.pricing-card .price {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'h i' 'h p';
+    color: #0080ff;
+}
+
+.pricing-card .price h1 {
+    grid-area: h;
+    font-size: 36px;
+}
+
+.pricing-card .price i {
+    grid-area: i;
+}
+
+.pricing-card .price p {
+    grid-area: p;
+}
+
+.pricing-card .features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.pricing-card .features span {
+    color: #009900;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* .pricing-card .features span:nth-child(4) {
+    color: #555555;
+}
+
+.pricing-card .features span:nth-child(5) {
+    color: #555555;
+} */
+
+.pricing-card .cta {
+    width: 100%;
+}
+
+.pricing-card .cta button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #0080ff;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+#contact {
+    height: 200vh;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#contact .jurisdiction, #contact .consultancy, #contact .contact-form {
+    grid-column: 1/1;
+    width: 100vw;
+    
+}
+
+#contact .jurisdiction {
+    color: white;
+    background-color: #001933;
+    grid-row: 1/3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#contact .jurisdiction .container, 
+#contact .consultancy .container,
+#contact .contact-form .container {
+    width: 80%;
+    height: 100%;
+}
+
+#contact .jurisdiction .container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact .jurisdiction .container .content, #contact .jurisdiction .container .map {
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+}
+
+#contact .jurisdiction .container .content h1 {
+    font-size: 36px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+#contact .jurisdiction .container .map img {
+    height: 100%;
+    width: 100%;
+}
+
+#contact .consultancy {
+    grid-row: 2/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .consultancy .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .consultancy .container .appointment-form {
+    background-color: white;
+    display: flex;
+    gap: 30px;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 0 6px 6px rgba(85, 85, 85, 0.1);
+}
+
+#contact .consultancy .container .appointment-form img {
+    height: 100%;
+}
+
+#contact .consultancy .container .appointment-form form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+}
+
+#contact .consultancy .container .appointment-form form input,
+#contact .consultancy .container .appointment-form form select {
+    width: 80%;
+    padding: 7.5px;
+    outline: none;
+}
+
+input[type="submit"] {
+    border: none;
+    color: white;
+    background-color: #0080ff;
+    text-transform: capitalize;
+}
+
+#contact .contact-form {
+    grid-row: 4/-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact-form .container {
+    width: 80%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact .contact-form .container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#contact .contact-form .container .content h3 {
+    text-transform: capitalize;
+}
+
+#contact .contact-form .container input {
+    min-width: 200px;
+    padding: 10px;
+}
+
+footer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer .quick-links, footer .footer {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.company-info, .legal, .features, .resources, .get-in-touch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+footer .quick-links a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+}
+
+footer .quick-links h3 {
+    text-transform: capitalize;
+}
+
+footer .footer {
+    text-transform: capitalize;
+}
+
+footer .get-in-touch span, .socials a{
+    color: #0080ff;
+    font-size: 24px;
+}
